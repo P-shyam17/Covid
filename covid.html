@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<!-- The website accepts personal information and covid symptoms you are experiencing and on submitting advises you on how to proceed based on how many symptoms you selected -->
+
+<script>
+
+
+var count= 0;
+
+function display()
+{
+
+var name= document.getElementById("name").value;
+var gender= document.getElementById("gender").value;
+var age= document.getElementById("age").value;
+
+document.write("Details entered : <br> <br> Name : " +name, " <br><br> Gender : " +gender, "<br><br> Age : " +age, " <br><br>");
+
+if(count > 2)
+{
+document.write("You have 3 or more symptoms, you may need urgent medical care.<br> Please call or go to the nearest emergency department if they persist. <br> <br> Steps to follow every day to prevent the spread : <br><br> 1) Get a COVID-19 vaccine as soon as you can when eligible. <br><br> 2) Wear a mask over your nose and mouth.<br><br> 3) Stay at least 6 feet away from people who don’t live with you. <br><br> 4) Avoid crowded areas and poorly ventilated spaces.<br><br> 5) Wash your hands often with soap and water, or use hand sanitizer with at least 60% alcohol");
+}
+else
+{
+document.write("You have less than 3 symptoms. Contact your health provider if they worsen or persist. <br><br> Steps to follow every day to prevent the spread : <br><br> 1) Get a COVID-19 vaccine as soon as you can when eligible. <br><br> 2) Wear a mask over your nose and mouth.<br><br> 3) Stay at least 6 feet away from people who don’t live with you. <br><br> 4) Avoid crowded areas and poorly ventilated spaces. 5) Wash your hands often with soap and water, or use hand sanitizer with at least 60% alcohol ");
+}
+}
+
+function chkbox()
+{
+count= count+1;
+}
+
+</script>
+
+<p>The purpose of the Coronavirus Self-Checker is to help you make decisions about seeking appropriate medical care. This system is not intended for the diagnosis or treatment of disease, including COVID-19.</p>
+
+
+
+<style>
+h1 {
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>Covid 19 Self-Checker</h1>
+
+<title>HTML Backgorund Color</title>
+   </head>
+   <body style="background-color:powderblue;">
+   
+   <title>HTML img Tag</title>
+   </head>
+
+   <body>
+   <marquee>
+   <br> <left>
+      <img src="https://static-ssl.businessinsider.com/image/5e78fee3ba85ee0b5b16c194-1966/screen%20shot%202020-03-23%20at%20112139%20am.png"
+      alt="Simply Easy Learning" 
+      width="450" 
+      height="150">
+   </body>
+   </marquee>
+
+
+
+<form method="GET">  
+
+
+<label for="name"> Enter your name : </label>
+
+<input type="text" id="name"><br><br>
+
+ 
+
+<label for="gender">Enter your gender : </label>
+
+<input type="text" id="gender"><br><br>
+
+
+
+<label for="age">Enter your age : </label>
+
+<input type="number" id="age"><br><br>
+
+<br> <left>
+
+
+
+<input type="checkbox" id="cold" value="cold" onclick="chkbox()">
+
+<label for="cold"> Cold</label><br>
+
+<input type="checkbox" id="cough" value="cough" onclick="chkbox()">
+
+<label for="cough"> Cough</label><br>
+
+<input type="checkbox" id="fever" value="fever" onclick="chkbox()">
+
+<label for="fever"> Fever</label><br>
+
+<input type="checkbox" id="tiredness" value="tiredness" onclick="chkbox()">
+
+<label for="tiredness"> Tiredness</label><br>
+
+<input type="checkbox" id="lossoftasteorsmell" value="lossoftasteorsmell" onclick="chkbox()">
+
+<label for="loss of taste or smell"> Loss of taste or smell</label><br>
+
+<input type="button" value="Submit" onclick="display()">
+
+</form>
+
+
+</body>
+
+</html>
